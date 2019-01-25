@@ -1,0 +1,41 @@
+* { margin: 5px;
+
+}
+
+body {
+    align-self: auto; margin: 5 px;
+}
+h1 {
+    color: darkgreen;
+}
+
+.head-line {
+    font-family: Georgia;
+    text-align: center;
+}
+
+p {
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+ }
+
+#p-like {
+    text-transform: uppercase;
+}
+
+img {
+    float: left;
+    margin: 25px;
+  }
+
+ul {
+    align-content: auto;
+    margin: 5px
+}

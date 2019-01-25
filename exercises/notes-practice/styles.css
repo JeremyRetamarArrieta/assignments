@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+}
+
+
+h3 {
+    border: 1px solid green;
+}
+
+.my-h3-class {
+    border: 3px dotted violet;
+
+}
+
+#my-h3-id {
+    font-family : sans-serif;
+    font-weight : lighter;
+    text-align: center;
+}
+
+# container h1 {
+    font-size: 20px;
+    font-family: "Gill Sans", 'Gill Sans MT' , Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    text-align:
+}
