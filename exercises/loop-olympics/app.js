@@ -102,26 +102,26 @@
 // [1, 1, 1], 
 // [2, 2, 2]]
 
-let index = 0;
-let array = [];
+//doesn't work
+// let emptyArray = [];
+// let index = 0;
 
-
-for ( i = 0; i < 3; i++){
-    let array2 = [];
-    array.push(array2)
-    for ( j = 0; j < 3; j++){
-            array2.push(index);
-        }
-   index++;
-    }
+// for ( i = 0; i < 3; i++){
+//     let array2 = [];
+//     emptyArray.push(array2)
+//     for ( j = 0; j < 3; j++){
+//             array2em.push(index);
+//         }
+//    index++;
+//     }
     
- console.log(array2)
+//  console.log(array2)
 
-
+//does work
 // let newArray = [];
 // let index = 0;
 
-// for (i = 0; i <3; i++){
+// for (i = 0; i < 3; i++){
 //     let newSubArray = [];
 //     newArray.push(newSubArray)
 //     for (j=0 ; j <3; j++){
