@@ -1,0 +1,20 @@
+* { border: 5px
+    
+
+}
+header {
+    display: inline-block;
+}
+
+main {
+    display: block;
+}
+
+article {
+    display: inline-block;
+    align-self: center;
+}
+
+nav {
+    display: block;
+}
