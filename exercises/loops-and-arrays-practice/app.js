@@ -14,7 +14,7 @@ console.log(counter)
 
 let count2 = 0
 
-var peopleWhoWantToSeeMadMaxFuryRoad = [
+var peoplearray = [
     {
       name: "Mike",
       age: 12,
@@ -38,10 +38,10 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
     }
   ]
 
-for ( i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
-    if (peopleWhoWantToSeeMadMaxFuryRoad[i].age > 18){
-        console.log("old enough");
+for ( i = 0; i < peoplearray.length; i++){
+    if (peoplearray[i].age > 18){
+        console.log(peoplearray[i].name + " old enough");
     } else {
-        console.log("not old enough")
+        console.log(peoplearray[i].name + " not old enough")
     }
 }
