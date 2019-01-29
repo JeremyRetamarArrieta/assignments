@@ -27,8 +27,13 @@
 // capitalize the shorter of the first half.)
 
 // function one(variable){
+
 //     if(variable.length%2 === 0 ){
-//         variable.slice(0,variable.length/ 2).toUpperCase()
-//     } 
+//         console.log(variable.slice(0,variable.length /2).toUpperCase())
+//         console.log(variable.slice(variable.length /2, variable.length).toLowerCase());
+//     } else{
+//         console.log(variable.slice(0, Math.floor(variable.length)).toUpperCase())
+//         console.log(variable.slice(variable.length/2, variable.length).toLowerCase());
+//     }
 // }
-// console.log(one("this is another string"))
+// one("this is another string")
