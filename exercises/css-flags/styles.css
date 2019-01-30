@@ -1,0 +1,30 @@
+.france{
+    margin: 10px 20px;
+    padding: 150px 250px;
+    background-color: white;
+    height: 200px;
+    width: 150px;
+}
+
+.red{
+    text-align: left;
+    background-color: red;
+    padding: 125px 75px;
+    margin-left: 1px 8px;
+    width: 125px;
+    height: 200px;
+}
+
+.white{
+    text-align: center;
+    background-color: white;
+    padding: 125px 75px;
+    margin-left: 50px;
+    height: auto;
+}
+
+.blue{
+    background-color: blue;
+    padding: 125px 75px;
+    height: auto;
+}

@@ -37,3 +37,15 @@
 //     }
 // }
 // one("this is another string")
+
+
+//Make a function that takes any string and capitalizes any character that follows a space.
+
+function capitalize(str){
+    var splitWords = str.split(' ');
+    for (var i = 0; i< splitWords.length; i++){
+        splitWords[i]= splitWords.charAt(0).toUpperCase()+ splitWords [i].slice(1);
+    }
+    return splitWords.join(' ')
+}
+console.log(capitalize("hey friends! practice practice practice!"))

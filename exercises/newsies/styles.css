@@ -1,20 +1,22 @@
-* { border: 5px
-    
-
-}
-header {
-    display: inline-block;
+* { 
+    box-sizing: border-box;
+    margin: 0px;
 }
 
-main {
+h1 {
     display: block;
+    text-align: center;
+    padding: 10px;
+    background: black;
+    color: white;
 }
 
-article {
+
+article{
     display: inline-block;
-    align-self: center;
+    width: 33%;
 }
 
-nav {
+.artical2{
     display: block;
 }

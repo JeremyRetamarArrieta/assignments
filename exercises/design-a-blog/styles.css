@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: rgba(141, 151, 241, 0.281)
+}
+
+
+.news{
+    top: 90px;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    position: fixed;
+}
+
+.contact{
+    top: 35px;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    position: fixed;
+}
+
+.about{
+    top: 60px;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    position: fixed;
+    text-align: left;
+}
+.active{
+    top: 10px;
+    text-align: left;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    position: fixed;
+}
+
+article{
+    display: block;
+    margin: 0% 25%;
+    width: 33%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+#news{
+    display: block;
+    margin: 0% 25%;
+
+}
+#pic{
+    text-align: right;
+    padding: 7px;
+    margin: 0% 30%
+}
