@@ -7,6 +7,7 @@
 let fruit = ["banana", "apple", "orange", "watermelon"];
 let vegetables = ["carrot", "tomato", "pepper", "lettuce"];
 
-function plants(){
-    
+function plants(vegetables){
+    return vegetables.pop
 }
+console.log(plants(vegetables))

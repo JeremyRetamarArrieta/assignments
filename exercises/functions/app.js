@@ -31,9 +31,15 @@
 
 
 //Write a function that accepts a string as a parameter. If the length of the string is less than or equal to twenty characters long, 
-//return the string concatenated with itself 
-//(string + string). If the string is more than twenty characters long, return the first half of the string.
+//return the string concatenated with itself (string + string). If the string is more than twenty characters long, return the first half of the string.
 
-function disfunc(){
-    
+function newfun(string){
+    for (let i = 0; i < 1 ; i++) {
+        if (string.length > 20){
+            console.log(string)
+            
+        }else string <= 20
+            console.log(string + string)
+    } 
 }
+newfun("0e32068nggvjugvnfgjnf")

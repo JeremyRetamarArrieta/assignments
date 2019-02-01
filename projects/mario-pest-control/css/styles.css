@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+.mario{
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    height: 360px;
+    width: auto;
+}
+
+.goombas{
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    width: 250px;
+    height: auto;
+}
+
+.bobOmbs{
+    position: relative;
+    width: 260px;
+    height: auto;
+}
+
+.cheepcheeps{
+    position: relative;
+    widows: 300px;
+    height: auto;
+}

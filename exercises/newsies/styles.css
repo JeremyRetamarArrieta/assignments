@@ -1,6 +1,7 @@
 * { 
     box-sizing: border-box;
     margin: 0px;
+    background-color: azure;
 }
 
 h1 {
@@ -13,10 +14,30 @@ h1 {
 
 
 article{
+    margin: 20px;
     display: inline-block;
-    width: 33%;
+    width: 35%;
+    height: auto;
+    position: relative;
 }
 
-.artical2{
+.article2{
+    position: relative;
+    margin: 20px;
     display: block;
+    width: 75%;
+    height: 100%;
+}
+
+#first-article{
+    padding: 20px;
+    position: relative;
+    background-color: gray;
+    margin: 5px;
+    display: inline-block;
+    width: 75%;
+    height: 100%;
+}
+p{
+    padding: 5px;
 }
