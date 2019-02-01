@@ -30,7 +30,7 @@ function addNumberToDom(e){
     
 
     // Create element
-    let h1Goombas = document.createElement("h1");
+    let h1Goombas = document.createElement("h3");
 
     //Give the element content
     h1Goombas.textContent = inputOne + inputTwo + inputThree
