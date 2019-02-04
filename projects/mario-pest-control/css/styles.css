@@ -1,6 +1,15 @@
-*{
+/* *{
     margin: 0%;
     box-sizing: border-box;
+} */
+
+body{
+
+    background-image: url("SMBackgrounds.jpg");
+    flex-wrap: wrap;
+    width: 1000pt;
+    height: 1000pt;
+
 }
 
 .mario{
@@ -17,6 +26,7 @@
     margin: 5px;
     width: 250px;
     height: auto;
+    color: rgba(63, 204, 63, 0.74)
 }
 
 .bobOmbs{
@@ -34,19 +44,26 @@
 }
 
 h3{
-    position: absolute;
+    padding: 5pt;
+    text-align: left;
+    margin: 30pt;
+    position: relative;
     top: 700px;
-    width: 0% 50%;
+    width: 45pt;
     height: auto;
 }
 
 footer{
     text-align: center;
     padding: 5px;
+    color:rgba(213, 230, 61, 0.836);
 
 }
 
+
+
 form{
+    color: rgba(61, 117, 230, 0.836);
     margin: 10px;
     padding: 10px;
 }
@@ -59,4 +76,18 @@ button{
     box-shadow: 3px;
     margin: 10px;
     padding: 9px;
+}
+
+p{
+    margin: 25px;
+    padding: 3px;
+}
+
+h4{
+    color: rgba(138, 138, 247, 0.9)
+}
+
+#h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(218, 243, 79);
 }

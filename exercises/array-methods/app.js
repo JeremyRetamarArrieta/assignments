@@ -16,17 +16,16 @@ function multi(){
     fruit.push(addNumberIndex);
     let veglength = vegetables.length
     vegetables.push(veglength);
-    let food = []
-    food.push(fruit + vegetables)
+    let food = fruit.concat(vegetables)
+    console.log(food)
+    food.splice(4,2)
+    food.reverse();
+    food.toString()
+    console.log(food)
     
-    //return food
-    for( i =0; i < 2; i++){
-        food.splice(4, 2);
-    }
-    return food
 }
 multi()
-console.log(multi())
+
 // console.log(fruit)
 // console.log(vegetables)
 

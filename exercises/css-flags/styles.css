@@ -1,21 +1,31 @@
-.france{
-    margin: 10px 20px;
+*{
+    margin: 0;
+    box-sizing: border-box
+    
+}
+
+
+/* .france{
+    margin: 10px 60px;
     background-color: white;
     height: 200px;
-    width: 100%;
+    width: 300px;
+    display: block;
+
 }
 
 .red{
     background-color: red;
     padding: 125px 90px;
-    width: 175px;
+    width: 250px;
     height: 200px;
+    margin-right: 50px;
 }
 
 .white{
     background-color: white;
     padding: 125px 75px;
-    margin-left: 50px;
+    margin-left: 60px;
     width: 150px;
     height: 200px;
 }
@@ -28,25 +38,61 @@
 }
 
 .gblack{
-    height: 200px;
-    width: 35px;
-    padding: 40px
-}
-body{
-    height: 100vh;
-}
 
-.germany{
-    margin-block-start: 40px 90px;
-    padding: 200px 300px;
-    height: 200px;
-    width: 200px;
-}
-
-.gblack{
-    padding-top: 200px;
-    padding-bottom: 300px;
-    height: 200px;
-    width: 75px;
+    display: block;
+    background-color: black;
+    margin: 5px;
+    height: 50px;
+    width: 100px;
+    padding: 40px;
     
+} */
+
+body{
+    background-color: black;
+}
+
+
+.greece{
+    width: 600px;
+    height: 360px;
+    background: white;
+    z-index: 0;
+}
+
+.stripes{
+    margin-bottom: 40px;
+    background: blue;
+    width: auto;
+    height: 40px;
+}
+
+.cross{
+    background: blue;
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+}
+
+.bottom{
+    margin-bottom: 0;
+}
+
+.horizontal{
+    background: white;
+    height: 40px;
+    width: 200px;
+    position: relative;
+    top: 80px;
+}
+
+.vertical{
+    height: 200px;
+    width: 40px;
+    position: absolute;
+    left: 80px;
+    top: 0%;
+    background: white;
 }

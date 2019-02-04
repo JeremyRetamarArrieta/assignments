@@ -5,6 +5,9 @@ let containerOne = document.getElementById("containerOne")
 let containerTwo = document.getElementById("containerTwo")
 
 let containerThree = document.getElementById("containerThree")
+
+let answer = document.getElementById("answer")
+
 //declare forms
 let form = document.form
 // Add submit events to the forms
@@ -12,8 +15,6 @@ form.addEventListener("submit", addNumberToDom)
 
 function addNumberToDom(e){ 
     e.preventDefault()
-    // Clear containter back to empty div
-    containerOne.innerHTML = ""
 
     // change to a number
     // grab the input's value
@@ -30,11 +31,11 @@ function addNumberToDom(e){
     
 
     // Create element
-    let h1Goombas = document.createElement("h3");
+    let h1Goombas = document.createElement("h4");
 
     //Give the element content
     h1Goombas.textContent = inputOne + inputTwo + inputThree
     
     //Append child
-    containerOne.appendChild(h1Goombas)
+    answer.appendChild(h1Goombas)
 }

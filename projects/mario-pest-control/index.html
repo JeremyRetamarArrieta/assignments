@@ -9,38 +9,41 @@
 </head>
 <body>
 
-<h1> Mario Pest Control </h1>
+<h1 id="h1"> Mario Pest Control </h1>
 
     <img class = "mario" src="https://i.stack.imgur.com/9dc0P.jpg" alt="picture of Mario">
-<h2>How  many Goombas has Mario incinerated?</h2>
+<h4>How  many Goombas has Mario incinerated?</h4>
+    
     <form name = "form">
-        <input type = "number" name = "goombas" placeholder = "">
-        
         <div class= "goombas" id = "containerOne">
-            <img class ="goombas" src="https://vignette.wikia.nocookie.net/nintendo/images/d/d5/GoombaNSMB.png/revision/latest?cb=20110724131649&path-prefix=en" alt="goomba">
+               
+            <img class ="goombas" src="https://vignette.wikia.nocookie.net/nintendo/images/d/d5/GoombaNSMB.png/revision/latest?cb=20110724131649&path-prefix=en" alt="goomba">    
+            <p>Mario earns 5 coins per Goomba.</p>
+            <input type = "number" name = "goombas" placeholder = "">
         </div>
 
         
         <div id="containerTwo">
             <h2>How many Bob-Obms has Mario lit?</h2>
             <img class = "bobOmbs" src="https://vignette.wikia.nocookie.net/yoshi/images/3/30/Bob-Omb.png/revision/latest?cb=20150630202001" alt="bobOmber">
-        
-    </div>
-    <input type = "number" name = "bobOmbs" placeholder = "">
+        </div>
 
-
+        <p>Mario earns 7 coins per Bob-ombs.</p>
+        <input type = "number" name = "bobOmbs" placeholder = "">
         
         <div id="containerThree"> 
             <img class = "cheepcheeps" src="https://4.bp.blogspot.com/-_DTG1xBLEZA/WDgHuH4NHgI/AAAAAAALf0w/6hjYqLHoLAgdAzlUyYftdKAaKlfC5J4SgCLcB/s1600/AS001355_04.gif" alt="cheepcheep">
         </div>
 
 <h2>How many CheepCheeps has Mario crispified?</h2>
+<p>Mario earns 11 coins per CheepCheep.</p>
 <input type = "number" name = "cheepcheeps" placeholder = "">
-        <br>
+
+    <br>
         <button>Submit</button>
     </form>
 
-
+<div id="answer"> <p> Total coins earned:</p></div>
     
 
 <footer>

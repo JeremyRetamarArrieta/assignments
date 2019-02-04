@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+    margin: 0;
+}
+
+@media (max-width: 768pt) {
+}
+
+.pink{
+
+    flex-direction: column;
+    margin: 5pt;
+    box-sizing: content-box;
+    display: block;
+    margin-top: 20pt;
+    position: relative;
+    background-color: pink;
+    width: 66%;
+    height: 22%;
+    max-width: 760pt;
+    padding: 100pt;
+
+}
+
+.red{
+
+    flex-direction: row;
+    display: inline-block;
+    margin: 20pt;
+    position: relative;
+    background: #EE2E84;
+    width: 12%;
+    height: 60pt;
+    box-sizing: content-box;
+    max-width: 760pt;
+    padding: 20pt;
+
+}
+
+
+.blue1{
+
+    position: relative;
+    display: inline-block;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    flex-direction: row;
+    margin: 25pt;
+    width: 275pt;
+    height: 90pt;
+    background: #85CFD8;
+}
+
+.blue2{
+
+    position: relative;
+    display: inline-block;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    flex-direction: row;
+    margin: 25pt;
+    width: 275pt;
+    height: 90pt;
+    background: #85CFD8;
+}
+
+.green{
+    display: inline-block;
+    background: #8DC63F;
+    margin: 25pt;
+    width: 360pt;
+    height: 90pt;
+    position: relative;
+
+}
+
+.orange{
+    margin-bottom: 25pt;
+    background: #E76E34;
+    display: inline-block;
+    width: 75pt;
+    height: 90pt;
+    position: relative;
+}
