@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+body {
+    background-color: rbg(4,5,77) ;
+    flex-direction: row;
+    display: flex;
+}
+
+div.calculator-body {
+    flex-direction: row;
+    width: 400pt;
+    height: 400pt;
+    background-color: rgb(206, 31, 31);
+    display: flex;
+    margin: auto;
+    border: 8px outset rgb(238, 105, 105);
+    border-radius: 15px;
+}
+
+input[type=button] {
+    display: inline-block;
+    flex-direction: row;
+    width: 25pt;
+    height: 30pt;
+    line-height: 3pt;
+    background: rgb(16, 121, 226)
+}
+
+form {
+    flex-direction: row;
+    margin: auto;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+#setOne{
+    display: inline-block;
+    margin: 10pt;
+    background: rgb(16, 121, 226);
+    width: 30pt;
+    height: 20pt;
+    flex-direction: row;
+    padding: 5pt;
+}
+#setTwo{
+    padding: 5pt;
+    display: inline-block;
+    margin: 10pt;
+    background: rgb(16, 121, 226);
+    width: 30pt;
+    height: 20pt;
+    flex-direction: row;
+}
+
+#setThree{
+    padding: 5pt;
+    display: inline-block;
+    margin: 10pt;
+    background: rgb(16, 121, 226);
+    width: 30pt;
+    height: 20pt;
+    flex-direction: row;
+}
+
+#ans{
+    margin: 30pt;
+    padding: 10pt;
+    width: 50pt;
+    height: 30pt;
+}
+
+#firstset{
+    padding: 35pt;
+    margin: 0;
+
+}

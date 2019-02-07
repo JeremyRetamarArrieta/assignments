@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    background: rgba(6, 247, 26, 0.603);
+}
+
+
+
+#item1{
+    border-radius: 25px;
+    background: rgba(41, 136, 4, 0.192);
+    margin: 5pt;
+    padding: 35pt;
+    text-align: left;
+    display: grid;
+    
+}
+
+#mitArtical{
+    margin: 5pt;
+    padding: 4.5pt;
+    display: grid;
+}
+
+h1{
+    padding: 5pt;
+    text-align: center;
+}
+
+#item2{
+    border-radius: 25px;
+    background: rgba(117, 204, 18, 0.5);
+    margin: 5pt;
+    padding: 35pt;
+    text-align: left;
+    display: grid;
+}
+
+#item3{
+    border-radius: 25px;
+    background: rgba(14, 136, 3, 0.205);
+    margin: 5pt;
+    padding: 35pt;
+    text-align: left;
+    display: grid;
+}
+
+
+
+#mit{
+    padding: 15pt;
+    border-radius: 1pt;
+    margin: 2pt;
+    position: fixed;
+    top: 0;
+}
+
+#crispr{
+    padding: 15pt;
+    border-radius: 1pt;
+    margin: 2pt;
+    top: 20pt;
+    position: fixed;
+}
+/* 
+#recoursion{
+    padding: 15pt;
+    top: 10pt;
+    border-radius: 1pt;
+    margin: 2pt;
+    position: fixed;
+} */
+
+#navBar{
+
+    top: 10pt;
+    position: fixed;
+    max-width: 115pt;
+    border-radius: 1pt;
+    display: block;
+    padding-bottom: 45pt;
+    margin: 4pt;
+    background: rgba(6, 453 , 6, 0.8)
+
+}
+
+footer{
+    bottom: 20pt;
+    display: grid;
+    margin: 20pt;
+}
+
+#bottomLiscencing{
+    display: inline;
+    margin: 0;
+    width: 60%;
+    height: 50pt;
+    max-width: 15pt;
+    max-height: 10pt;
+}
+
+#imagesToSize{
+    padding-block-end: 5pt;
+    display: grid;
+    margin: 33%;
+    width: 360pt;
+    height: 420pt;
+    max-width: 768pt;
+    max-height: auto;
+    background: rgba(4, 6, 158, 0.671)
+}
