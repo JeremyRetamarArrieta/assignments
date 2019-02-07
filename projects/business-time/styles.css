@@ -1,12 +1,36 @@
 *{
     margin: 0;
-    box-sizing: border-box;
-    background: rgba(6, 247, 26, 0.603);
+    box-sizing: content-box;
+    background: rgba(6, 247, 26, 0.303);
 }
 
+div{
 
+    position: relative;
+}
+
+#imageCRISPR{
+    position: relative;
+    background-image: url("https://www.cambridge.org/core/services/aop-file-manager/file/582df76221b559de0536a2c2");
+    display: grid;
+    max-width: 20pt;
+    max-height: 30pt;
+    margin: 5pt;
+}
+#imageThree{
+    background-image: url("http://news.mit.edu/sites/mit.edu.newsoffice/files/styles/news_article_image_top_slideshow/public/images/2016/MIT-Program-Bacteria_0.jpg?itok=7YrMcwuE");
+    padding: 5pt;
+    margin: 5pt;
+    background-repeat: repeat;
+    border-radius: 5pt;
+}
+
+span{
+    font-weight: bold;
+}
 
 #item1{
+    grid-row: auto;
     border-radius: 25px;
     background: rgba(41, 136, 4, 0.192);
     margin: 5pt;
@@ -28,17 +52,9 @@ h1{
 }
 
 #item2{
+
     border-radius: 25px;
     background: rgba(117, 204, 18, 0.5);
-    margin: 5pt;
-    padding: 35pt;
-    text-align: left;
-    display: grid;
-}
-
-#item3{
-    border-radius: 25px;
-    background: rgba(14, 136, 3, 0.205);
     margin: 5pt;
     padding: 35pt;
     text-align: left;
@@ -48,64 +64,23 @@ h1{
 
 
 #mit{
+    display: grid;
     padding: 15pt;
     border-radius: 1pt;
     margin: 2pt;
     position: fixed;
-    top: 0;
+    top: 15pt;
 }
 
 #crispr{
+    display: grid;
     padding: 15pt;
     border-radius: 1pt;
     margin: 2pt;
     top: 20pt;
     position: fixed;
 }
-/* 
-#recoursion{
-    padding: 15pt;
-    top: 10pt;
-    border-radius: 1pt;
-    margin: 2pt;
-    position: fixed;
-} */
 
-#navBar{
 
-    top: 10pt;
-    position: fixed;
-    max-width: 115pt;
-    border-radius: 1pt;
-    display: block;
-    padding-bottom: 45pt;
-    margin: 4pt;
-    background: rgba(6, 453 , 6, 0.8)
 
-}
 
-footer{
-    bottom: 20pt;
-    display: grid;
-    margin: 20pt;
-}
-
-#bottomLiscencing{
-    display: inline;
-    margin: 0;
-    width: 60%;
-    height: 50pt;
-    max-width: 15pt;
-    max-height: 10pt;
-}
-
-#imagesToSize{
-    padding-block-end: 5pt;
-    display: grid;
-    margin: 33%;
-    width: 360pt;
-    height: 420pt;
-    max-width: 768pt;
-    max-height: auto;
-    background: rgba(4, 6, 158, 0.671)
-}
