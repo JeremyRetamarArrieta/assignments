@@ -44,9 +44,8 @@
 
 function memberOfIluminati(arr){
     // your code here
-return arr.filter(function(member){
-    if ( === true){
-        }return member
+return arr.filter(function(person){
+   return person.member
     })
   }
   // test

@@ -1,7 +1,11 @@
 *{
     margin: 0;
     box-sizing: content-box;
-    background: rgba(6, 247, 26, 0.303);
+    background: rgba(6, 191, 247, 0.39);
+}
+body{
+
+    color: rgb(2, 48, 252);
 }
 
 div{
@@ -54,7 +58,7 @@ h1{
 #item2{
 
     border-radius: 25px;
-    background: rgba(117, 204, 18, 0.5);
+    background: rgba(40, 219, 174, 0.034);
     margin: 5pt;
     padding: 35pt;
     text-align: left;

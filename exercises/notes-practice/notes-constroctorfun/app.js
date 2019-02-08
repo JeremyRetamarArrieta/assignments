@@ -1,13 +1,13 @@
 // Constructor Functions
 // Blueprint for an object(s)
 
-// We want a function that can create an object like this
+// We want a function that can create an object like thiscd
 // for every user that joins our site
-    // var user = {
-    //     username: "buddy123",
-    //     email: "buddy@gmail.com",
-    //     age: 20
-    // }
+    var user = {
+        username: "buddy123",
+        email: "buddy@gmail.com",
+        age: 20
+    }
 
 // So we make this blueprint that allows you to send a username, email and age
 // , and what you get back is an object with those properties
@@ -21,22 +21,23 @@ function User(username, email, age){
     }
 }
 
+console.log(User("jak","Speechsm@GrammarList.com",45))
 // The 'this' keyword inside of an object refers to the object it's being used in.
 // ex:
-// var person = {
-//     name: "joe",
-//     speak: function(){
-//         console.log(this.name) // instead of saying person.name.
-//     }
-// }
+var person = {
+    name: "joe",
+    speak: function(){
+        console.log(this.name) // instead of saying person.name.
+    }
+}
 
 // Using this.speak inside of the constructor function is not best practice because
 // a new version of `this.speak` is created everytime you make a new user.
 // So instead you can add the speak method to the 'User' prototype so all User
 // objects have access to use it
-    // User.prototype.speak = function(){
-    //     console.log(this.username)
-    // }
+    User.prototype.speak = function(){
+        console.log(this.username)
+    }
 
 
 // buddy and frank are 'instances' of our 'User' constructor
