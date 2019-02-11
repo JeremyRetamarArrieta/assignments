@@ -1,0 +1,49 @@
+{
+    "title": "Json's Deli",
+    "menu": {
+        "appetizers": [
+                {
+                "name": "banana peels",
+                "ingredients": ["90% banana peels", "10% mystery"],
+                "description": "hard leather like banana peels",
+                "preptime": "5 mins"
+                },
+                {
+                "name": "french onion dip",
+                "ingredients": ["mostly the french, some onions and dip"],
+                "description": "best soup like dip you'll ever dip",
+                "preptime": "10 mins"
+                }
+            ],
+        "cold foods": [
+            {
+            "name": "rasins",
+            "ingredients":["old wrinkled grapes", "thoughts of an old man", "juiced unicorn"],
+            "description": "You've never had rasins like these. One amazing experience",
+            "preptime": "1 year"
+
+            },
+
+            {
+            "name": "pizza",
+            "ingredients": ["blood of the wicked", "pinky toe of an orc", "mammoth cheese", "optional: bones of your enemies"],
+            "description": "Just when you thought you had tasted it all. This firey treat comes to existence. ",
+            "preptime": "30 minutes of your sad life"
+            }
+                      ],
+        "hot foods":[
+            {
+                "name": "cheese steak",
+                "ingredients":[" chocolate cocoa puffs", "14 pickel ricks", "holy grail"],
+                "description": "If you like philiy cheese steaks you'll love this recipe.",
+                "preptime": "as long as it takes just wait a minute"
+            },
+
+            {    "name": "soupSup",
+                "ingredients":["lava from mordor", "the book of the Dead", "Shrek's ear wax"],
+                "description": " you have never tasted a soup this spicy. It's properties bring the dead back to life. Caution: they may swear at you because of how spicy this is.  ",
+                "preptime": "7 minutes or less"
+            }
+        ]
+            }
+}
