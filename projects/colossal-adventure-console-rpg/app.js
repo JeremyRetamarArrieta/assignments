@@ -2,197 +2,190 @@ var ask = require('readline-sync')
 // /////////////////////
 // // Global variables //
 var player = {
-    dps: 0.5,
+    dps: 50,
     name: '',
-    health: 100,
-    inventory: []
+    userHP: 100,
+    inventory: [],
+    score: 0
 }
 
-// var items = [
-//     {gold: 10},
-//     {silver: 7},
-//     {copper: 3},
-//     {emerald: 20},
-//     {sapphire: 25},
-// ]
-// array object for items
+var items = [{
+        name: "gold",
+        value: 10
 
+    },
+    {
+        name: "silver",
+        value: 7,
+    },
+    {
+        name: "copper",
+        value: 3
+    },
+    {
+        name:"emerald",
+        value: 20
+    },
+    {
+        name: "sapphire",
+        value: 25
+    },
+]
 
+//enemys
+var enemyStorage = [{
+        name: 'Fred, Fred Ferd Burger',
+        enemyHP: 35,
+        enemyAttack: 30,
+    },
+    {
+        name: "Lord Moldy Butt",
+        enemyHP: 45,
+        enemyAttack: 30,
+    },
+    {
+        name: "Tyler Durdan",
+        enemyHP: 90,
+        enemyAttack: 40,
+    },
+    {
+        name: "Captain Jack Sparrow",
+        enemyHP: 90,
+        enemyAttack: 40,
+    },
+    {
+        name: "007",
+        enemyHP: 50,
+        enemyAttack: 35,
+    }
+]
 
-// function getRandomItem(){
-//    var randomItem = Math.floor(Math.random() * 5 )
-//    //console.log(randomItem)
-//    var pushItem = items[randomItem]
-//    //console.log(pushItem)
-//    return player.inventory.push(pushItem)
-    
-// } 
+//randomly generated enemies
 
-// getRandomItem()
-// console.log(player.inventory)
+function enemySummon() {
+    var summonChance = Math.ceil(Math.random() * enemyStorage.length)
+    var summonedEnemy = enemyStorage[summonChance]
+    console.log(summonedEnemy)
+    return summonedEnemy
+}
 
-// // // itemDropped = [getRandomItem()]
+player.name = ask.question(' Champion? What is your name? ');
 
-// // //randomly generated enemies
-// // var enemyStorage = [];
-// //     for (var i = 0; i > enemy;i++){
-// //         var enemy = {
-// //         dps: 1,
-// //         name: "",
-// //         health: 50,
-// //         itemDrop: itemDropped
-// //     }
-// // }
+console.log('Welcome ' + player.name + ' !');
 
-// // //enemy should drop item randomly
+if (player.name) {
+    walkSequence()
+}
 
-
-
-enemies = ['Fred Fred Fred Burger' , "Lord Moldy Butt", "Tyler Durdan", "Captain Jack Sparrow"]
-player.name = ask.question('Champion? What is your name?');
-
-console.log('Welcome ' + player.name + '!');
-
-
-// var adventureMode = function() {
-// 	var self = this;
-// 	var enemy;
-// 	var randomEnemy = function() {
-// 		var randomInt = Math.floor(Math.random() * 6 )
-// 		enemy = enemies[randomInt];
-// 		return enemy;
-//     };
-    
-//     this.user = player.name;
-// 	this.userPlaying = true;
-// 	this.userHp = 100;
-// 	this.enemyHp = 50;
-// 	this.enemyIsActive = null;
-//     this.enemyCount = 1;
-//     this.enemyItem = Math.floor(Math.random(items) * 5)
-    
 //     this.userChoice = function () {
-        var action = ask.question('What do you wanna do? Press W to go for a walk, press S to sleep in or d for dance:')
-        // var userDPS = Math.floor(Math.random() * (40 - 20 + 1) + 25);
-        switch(action) {
-            
-            case "d": console.log("You rocked the universe so well it has rewarded you with 10hp.")
-            user.Hp + 10;
+
+function walkSequence() {
+    var action = ask.question(' What do you wanna do? Press W to go for a walk, press S to sleep in, press P for inventory or D for dance: ')
+    switch (action) {
+        case "d":
+            console.log(" You rocked the universe so well it has rewarded you with 10hp. ")
+            player.userHP += 10;
+            attack()
             break
 
-            case "s": console.log("You just went night night ninja")
+        case "s":
+            console.log(" You just went night night ninja ")
+            walkSequence()
             break
-            
-            case "w": function walk(){
-                
-                var chance = Math.floor(Math.random() * 4)
-                // if number is 1 === attack
-                if(chance === 1){
-                   console.log(" Something decked you in the face !")
-                   run()
 
-                }else {
-                    console.log(" Crickets chirpping.")
-                    setTimeout(function(){
-                        console.log('uneventful day');
-                    }, 2000);
-                }
+        case "w":
+            attack()
+            break
+        case "p":
+            checkInventory()
+            break
+        default:
+        walkSequence()
+            break
+
+    }
+}
+
+function attack() {
+    var chance = Math.floor(Math.random() * 3)
+    // if number is 1 === attack
+    if (chance === 1) {
+        console.log(" Something decked you in the face !")
+        playerChoice();
+
+    } else if (chance != 1) {
+        console.log(" Crickets chirpping.")
+        setTimeout(function () {
+            console.log('uneventful day')
+            walkSequence();
+        }, 2000)
+    }
+}
+
+function fight() {
+    var enemy = enemySummon();
+    // console.log(enemy)
+    if (enemyStorage.length === 0) {
+        return ( " " + player.name + " won the game with " + player.score + " points.")
+    } else {
+        while (player.userHP > 0) {
+
+            player.userHP -= enemy.enemyAttack;
+
+            enemy.enemyHP -= player.dps;
+
+            if (enemy.enemyHP <= 0) {
+                console.log(" You knocked " + enemy.name + " the **** out!")
+                var index = enemyStorage.findIndex(each => each.name === enemy.name);
+                enemyStorage.splice(index, 1);
+                getRandomItem()
+                console.log(player.inventory)
+                return walkSequence()
             }
+        }
+        console.log(" You DIED! ")
+    }
+}
 
-        } walk()
-            
+// enemy should drop item randomly
 
+function getRandomItem() {
+    var randomItem = Math.floor(Math.random() * items.length)
+    var pushItem = items[randomItem]
+    player.score += pushItem.value
+    return player.inventory.push(pushItem) 
 
+}
 
-
-
-//     function run(){
-//      var randomNum = Math.floor(Math.random() * 3 )
-//      if( randomNum == 1 ){
-//         console.log("Run run run as fast as you can you can't catch me.")
-//         setTimeout(function(){
-//             console.log(' Ran away from a fight? You are a joke.');
-//         }, 2000);
-//         break
-//          //****THIS PART IS IMPORTANT. DO NOT CALL WALK()****
-//      } else {
-//          console.log("Uh oh...")
-//          this.enemyAction = function() {
-//             if(self.userIsActive === true && self.enemyHp > 0) {
-//                 var enemyDamagePTS = Math.floor(Math.random() * 25);
-//                 self.userHp -= enemyDamagePTS;
-//                 console.log(enemy + ' farts in your face ' +  enemyDamagePTS + 'its super effective');
-    
-//                 if(self.userHp <= 0) {
-//                     self.userIsActive = false;
-//                     console.log(enemy + ' just murdered your face off ' + self.user + 'You DIED');
-//                 }
-    
-//             } else if (self.enemyHp <= 0) {
-//                 self.enemyIsActive = false;
-//                 self.enemyCount++;
-//                 console.log(self.user + ' you knocked ' + enemy + 'the fudge out');
-//             }
-//         };
-    
-//         this.enemyRespawn =  function() {
-//             self.enemyIsActive = true;
-//             self.enemyHp = 50;
-//         };
-    
-//         this.attackProcess = function() {
-//             if(self.enemyIsActive) {
-//                 while(self.enemyHp > 0 && self.userIsActive === true) {
-//                     self.userAction();
-//                     self.enemyAction();
-//                 }
-//             }
-//         };
-
-//         this.fight = function() {
-//             self.enemyIsActive = true;
-//             readlineSync.ask('You just got caught up in a brawl. Press a to attack or r to run.');
-
-//             switch(playAction){
-//                 case "a": = randomEnemy();
-
-//             console.log('walk a walk a walk a walk');
-//             console.log('By the Gods a ' + enemy + ' has appeared');
-//             self.attackProcess();
-    
-//             while(self.enemyIsActive === false && self.enemyCount <= enemies.length) {
-//                 console.log('==============================================');
-// //                readlineSync.keyIn('Press any key to walk: ');
-//                 randomEnemy();
-//                 console.log('Walking......');
-//                 console.log('Prepare to die warrior! , a ' + enemy + ' challenges you.');
-//                 self.enemyRespawn();
-//                 self.attackProcess();
-//             }
-//             }
-
-//             randomEnemy();
-//             console.log('walk a walk a walk a walk');
-//             console.log('By the Gods a ' + enemy + ' has appeared');
-//             self.attackProcess();
-    
-//             while(self.enemyIsActive === false && self.enemyCount <= enemies.length) {
-//                 console.log('==============================================');
-// //                readlineSync.keyIn('Press any key to walk: ');
-//                 randomEnemy();
-//                 console.log('Walking......');
-//                 console.log('Prepare to die warrior! , a ' + enemy + ' challenges you.');
-//                 self.enemyRespawn();
-//                 self.attackProcess();
-//             }
-    
-//             if (self.enemyIsActive === false) {
-//                 console.log(self.user + ' Your power level its its over 9,000! You did it! You destroyed the Gang of Poka Dot Rasins');
-//             }
-//         };
+function playerChoice() {
+    var randomNum = Math.floor(Math.random() * 3)
+    var action = ask.question("a for attack, r for run")
+    console.log(action)
+    switch (action) {
         
-//         this.fight();
-//     };
-//  }
+        case "a":
+            fight()
+            break
 
-// adventureMode()
+        case "r":
+            // (randomNum === 1)
+            run()
+            break
+    }
+
+};
+
+function run() {
+    console.log("Run run run as fast as you can you can't catch me.")
+    setTimeout(function () {
+        console.log(' Ran away from a fight? You are a joke.');
+        walkSequence()
+    }, 2000);
+}
+
+
+
+function checkInventory(){
+        console.log(player.inventory)
+    walkSequence()
+}
