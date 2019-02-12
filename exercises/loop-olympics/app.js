@@ -131,9 +131,24 @@
 // }
 // console.log(newArray)
 
+var matrix =[[1,2,3],[5,6,7],[9,8,4]]
+
+
+// console.log(matrix[1][2])
+
+
+// for (var i = 0; i < matrix.length; i++){
+//    for (var j = 0;  j < matrix[i].length;  j++) {
+//     matrix.fill([0,0,0])
+    
+//    }
+//    return console.log(matrix)
+//    }
 
 
 
-
-
-
+for (var i = 0; i < matrix.length; i++){
+   for (var j = 0;  j< matrix[i].length;  j++) {
+   console.log(matrix[i][j])
+    }
+   }

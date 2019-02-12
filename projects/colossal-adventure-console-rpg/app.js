@@ -63,13 +63,13 @@ var enemyStorage = [{
 //randomly generated enemies
 
 function enemySummon() {
-    var summonChance = Math.ceil(Math.random() * enemyStorage.length)
+    var summonChance = Math.floor(Math.random() * enemyStorage.length)
     var summonedEnemy = enemyStorage[summonChance]
     console.log(summonedEnemy)
     return summonedEnemy
 }
 
-player.name = ask.question(' Champion? What is your name? ');
+player.name = ask.question(' Welcome to the world of Narnia...Champion? What is your name? ');
 
 console.log('Welcome ' + player.name + ' !');
 
@@ -85,7 +85,7 @@ function walkSequence() {
         case "d":
             console.log(" You rocked the universe so well it has rewarded you with 10hp. ")
             player.userHP += 10;
-            attack()
+            walkSequence()
             break
 
         case "s":
@@ -100,7 +100,7 @@ function walkSequence() {
             checkInventory()
             break
         default:
-        walkSequence()
+            walkSequence()
             break
 
     }
@@ -176,12 +176,16 @@ function playerChoice() {
 };
 
 function run() {
+   // chance = Math.floor(Math.random()* 2)
+   // if ( chance === 0){  
     console.log("Run run run as fast as you can you can't catch me.")
     setTimeout(function () {
         console.log(' Ran away from a fight? You are a joke.');
         walkSequence()
-    }, 2000);
-}
+        }, 2000);
+    }
+    
+//}
 
 
 
