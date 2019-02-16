@@ -4,11 +4,10 @@
 
 #wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 header {
-    
     background-image: url("huntington.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -19,13 +18,14 @@ header {
     justify-content: center;
     align-items: center;
     height: 200pt;
+    width: auto;
 }
 
 main {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: darkkhaki
+    background-color: darkkhaki;
 }
 
 footer {
