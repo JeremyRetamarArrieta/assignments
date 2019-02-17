@@ -2,7 +2,7 @@
 const todoListContainer = document.getElementById('todolist-container')
 const todoForm = document["add-todo-form"]
 
-const toDelete = document.getElementById
+// const toDelete = document.getElementById
 
 // Reuseable function to get our Todos from the database
 function getData(){
@@ -17,12 +17,17 @@ function listTodos(todosArr){
     for(let i = 0; i < todosArr.length; i++){
         // Make it show on the DOM
         // Create Elements
-        const todoContainer = document.createElement('div')
-        const title = document.createElement('h1')
-        const imgUrl = document.createElement('img')
+        const todoContainer = document.createElement('div');
+        const title = document.createElement('h1');
+        const description = document.createElement("h2");
+        const price = document.createElement("h3");
+        const imgUrl = document.createElement('img');
+        
+        const buttonX = document.createElement("button");
 
         const checkBox = document.createElement('input');
         checkBox.type = "checkbox";
+        checkBox.checked = todosArr[i].completed;
 
 
 
@@ -30,15 +35,34 @@ function listTodos(todosArr){
         // Edit the element / Give it content
         todoContainer.classList.add("todo-container")
         title.textContent = todosArr[i].title
+        buttonX.textContent = "delete"
+        price.textContent = todosArr[i].price
+        description.textContent = todosArr[i].description
+        todoContainer.toDoId = todosArr[i]._id
         imgUrl.setAttribute("src", todosArr[i].imgUrl)
         // EVENT LISTERNER FOR CHECKED BOX
-        checkbox.addEventListener('change', function (){
-            if (this.checked){
-        //checked 
-            }else {
-                //not checked 
+        checkBox.addEventListener('change', function (e){
+            console.log(e.target.parentNode.toDoId)
+            const updates = {
+                completed: e.target.checked
             }
-            })
+           axios.put(`https://api.vschool.io/jeremyretamararrieta/todo/${e.target.parentNode.toDoId}`, updates).then(res => {
+            todoListContainer.innerHTML = ""
+            getData()
+           })     
+        })
+        //event listener for button
+        buttonX.addEventListener("click", function (e){
+            e.target.click
+
+        axios.delete(`https://api.vschool.io/jeremyretamararrieta/todo/${e.target.parentNode.toDoId}`).then(res =>{
+        getData()
+        }).catch(err => console.log(err))
+        
+
+        })
+
+
         // if the current todo is completed, make the title have a line-through
         if(todosArr[i].completed){
             title.style.textDecoration = "line-through"
@@ -47,9 +71,13 @@ function listTodos(todosArr){
         
         // Append it to the DOM
         todoContainer.appendChild(title)
-        todoContainer.appendChild(imgUrl)
-        todoListContainer.appendChild(todoContainer)
         todoContainer.appendChild(checkBox)
+        todoContainer.appendChild(description)
+        todoContainer.appendChild(imgUrl)
+        todoContainer.appendChild(price)
+        todoContainer.appendChild(buttonX)
+        todoListContainer.appendChild(todoContainer)
+        
 
     }
 }
@@ -83,10 +111,7 @@ todoForm.addEventListener("submit", (e) => {
     }).catch(err => console.log(err))
 
 
-    axios.delete().then(res =>{
-        getData()
-    }).catch(err => console.log(err))
-
+   
 })  
 
 

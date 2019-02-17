@@ -1,5 +1,37 @@
-.todo-cointainer {
-    border: solid;
-    margin: 5pt;
+*{
+    margin: 0;
+    border-radius: 12pt;
+    background: rgba(105, 159, 246, 0.103)
+}
+
+
+.todo-container {
+    display: grid;
+    border: 1pt rgba(52, 230, 230, 0.301) solid;
+    margin: 20pt;
     padding: 10pt;
+    background-color: rgb(233, 209, 181);
+}
+
+h1{
+    border-radius: 2pt;
+    padding: 5pt;
+    background: rgb(11, 200, 200)
+}
+h2{
+    display: flex;
+    background: rgb(42, 42, 233);
+    flex: column;
+    justify-content: center;
+}
+
+button{
+    box-shadow: 2pt 2pt;
+    width: 50pt;
+    height: auto;
+}
+
+input{
+    display: flex;
+    justify-content: end;
 }
