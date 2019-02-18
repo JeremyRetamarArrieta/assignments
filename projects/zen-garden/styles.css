@@ -1,24 +1,41 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
-#wrapper {
+.page-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-header {
-    background-image: url("huntington.jpg");
-    background-repeat: no-repeat;
+    grid: column;
+    
+}.intro {
     background-position: center;
     background-size: cover;
     font-size: 20pt;
     background-color: dodgerblue;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200pt;
-    width: auto;
+    flex-direction: row;
+}
+
+header{
+    background: url("huntington.jpg");
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+body{
+    line-height: 35%;
+    grid-area: auto;
+}
+
+div{
+    display: flex;
+    margin: 0;
+    padding: 25pt;
+    grid-auto-columns: 20%;
+
 }
 
 main {
@@ -29,7 +46,9 @@ main {
 }
 
 footer {
-    height: 50px;
+    grid-column: 2 / 3;
+    grid-row: 1 / span 3;
+    height: 100%;
     background-color: violet;
     display: flex;
     justify-content: center;
@@ -49,5 +68,6 @@ footer {
         grid-column: 2 / 3;
         grid-row: 1 / span 3;
         height: 100%;
+
     }
 }

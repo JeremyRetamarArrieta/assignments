@@ -82,10 +82,6 @@ function listTodos(todosArr){
     }
 }
 
-
-
-
-
 // FORM EVENT LISTENER FOR DOING OUR POST REQUEST TO THE API
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault()
