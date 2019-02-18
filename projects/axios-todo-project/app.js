@@ -58,16 +58,13 @@ function listTodos(todosArr){
         axios.delete(`https://api.vschool.io/jeremyretamararrieta/todo/${e.target.parentNode.toDoId}`).then(res =>{
         getData()
         }).catch(err => console.log(err))
-        
 
         })
-
 
         // if the current todo is completed, make the title have a line-through
         if(todosArr[i].completed){
             title.style.textDecoration = "line-through"
         }
-
         
         // Append it to the DOM
         todoContainer.appendChild(title)
@@ -77,8 +74,6 @@ function listTodos(todosArr){
         todoContainer.appendChild(price)
         todoContainer.appendChild(buttonX)
         todoListContainer.appendChild(todoContainer)
-        
-
     }
 }
 
@@ -88,11 +83,18 @@ todoForm.addEventListener("submit", (e) => {
 
     // Generate newTodo obj
     const newTodo = {
-        title: todoForm.title.value
+        title: todoForm.title.value,
+        description: todoForm.description.value,
+        price: todoForm.price.value,
+        imgUrl: todoForm.imgUrl.value
     }
 
     // Reset the form value to be empty
     todoForm.title.value = ""
+    todoForm.description.value =""
+    todoForm.price.value = ""
+    todoForm.imgUrl.value = ""
+
 
     
     
