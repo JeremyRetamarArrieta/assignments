@@ -3,56 +3,42 @@
     padding: 0;
 }
 
+#grid-container {
+
+}
+
+
+
+
 .page-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid: column;
+    
     
 }.intro {
-    background-position: center;
-    background-size: cover;
-    font-size: 20pt;
-    background-color: dodgerblue;
-    display: flex;
-    flex-direction: row;
+   =
 }
 
 header{
-    background: url("huntington.jpg");
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
+   
 }
 
 body{
-    line-height: 35%;
-    grid-area: auto;
+ 
 }
 
 div{
-    display: flex;
-    margin: 0;
-    padding: 25pt;
-    grid-auto-columns: 20%;
+   
 
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: darkkhaki;
+    
 }
 
 footer {
-    grid-column: 2 / 3;
-    grid-row: 1 / span 3;
-    height: 100%;
-    background-color: violet;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+}
+article{
+    
 }
 
 @media only screen and (min-width: 700px){

@@ -61,6 +61,7 @@ function listTodos(todosArr){
 
         })
 
+
         // if the current todo is completed, make the title have a line-through
         if(todosArr[i].completed){
             title.style.textDecoration = "line-through"

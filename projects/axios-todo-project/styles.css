@@ -6,6 +6,7 @@
 
 
 .todo-container {
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     border: 1pt rgba(52, 230, 230, 0.301) solid;
     margin: 20pt;
@@ -20,9 +21,11 @@ h1{
 }
 h2{
     display: flex;
-    background: rgb(42, 42, 233);
+    background: rgba(82, 82, 252, 0.589);
     flex: column;
     justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 button{
