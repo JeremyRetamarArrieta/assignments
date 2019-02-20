@@ -88,7 +88,12 @@ ul{
 p{
     font-size: 12pt;
     font-weight: lighter;
-    padding: 20pt;
+    padding: 15pt;
+}
+
+h4{
+    font-weight: 100;
+    
 }
 
 h3{
@@ -102,18 +107,34 @@ section {
     font-family: sans-serif;
 }
 
-.link-container {
+
+#link-container {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
     width: 100%;
 }
 
-.link-container a {
-    border-bottom: 1px solid black;
+#bamboo{
+    grid-template-columns: (repeat, 5);
+    background-image: url("bamboo.png");
     text-align: center;
+    background-color: rgba(66, 211, 138, 0.192);
+    border-bottom: solid 1px ;
+}
+.bamboo{
+    text-align: left;
+    border-bottom: solid 1pt;
 }
 
+#list{
+    text-align: left;
+}
+
+.list{
+    background-color: rgba(1, 141, 71, 0.192);
+    border-bottom: solid 1pt;
+    padding: 2pt;
+}
 
 @media only screen and (max-width: 420px){
     .vanish {
