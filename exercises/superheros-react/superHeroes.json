@@ -1,0 +1,27 @@
+{
+    "superHeroes": [
+        {
+            "name": "Grim",
+            "imgUrl": "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic1.wikia.nocookie.net%2F__cb20090626194731%2Fbillyandmandy%2Fimages%2F0%2F0b%2FGrim_evol.jpg&f=1",
+            "catchPhrase":"Atrocia, you've stolen my heart. Good thing I've got three or four more in the freezer."
+        },
+
+        {
+            "name":"John Wick",
+            "imgUrl": "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-RrraqleAqZk%2FUrkPYTvmKsI%2FAAAAAAAAADQ%2F3j-JVmo6Kc4%2Fs1600%2FJohn%2BWick%2BMovie.jpg&f=1",
+            "catchPhrase": "My name is John Wick you kill my puppy... Prepare to die"
+        },
+
+        {
+            "name":  "Red Forman",
+            "imgUrl": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1475282924%2Fh.jpg&f=1",
+            "catchPhrase": "You morons just hang vacancy signes on your asses, and my foot's looking for a room"
+        },
+
+        {
+            "name": "Alphonse" ,
+            "imgUrl": "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Forig00.deviantart.net%2Fd551%2Ff%2F2014%2F059%2F6%2Fe%2Falphonse_wallpaper_by_ahoynateo-d78dtov.jpg&f=1",
+            "catchPhrase": "In order to obtain something, there must be something of equal value. It is the law of conservation in alchemy. Back then, we believed that it was the truth of the world. However, the real world isn’t perfect, so there is not just a single law that governs everything that happens within it."
+        }
+    ]
+}
