@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+}
+
+.App{
+    margin: 11% 22% 22% 22%;
+    padding: 15pt;
+    border: 1pt dashed rgb(23, 78, 344);
+}
+
+.inputs{
+    padding: 15pt;
+    margin: 5pt 5pt 5pt 5pt;
+    border-radius: 10%;
+}
