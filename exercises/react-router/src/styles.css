@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+
+ul{
+    display: grid;
+    padding: 5pt;
+    margin: 10% 10% 10% 10%;
+    flex-direction: row;
+}
+
+.footer-banner{
+    display: grid;
+    margin-bottom: 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
