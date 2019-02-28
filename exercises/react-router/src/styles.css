@@ -11,7 +11,12 @@ ul{
 
 .footer-banner{
     display: grid;
+    color: azure;
+
     margin-bottom: 20%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    background-image: url(lighttheway.jpg);
+    background: cover;
+    height: 100%;
+    width: 100%;
 }

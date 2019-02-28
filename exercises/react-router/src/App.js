@@ -12,9 +12,12 @@ const App = () =>{
     return(
         <div>
             <Header />
+            <Navbar/>  {/*This is outside Switch, so it will always render*/}
             <Switch>
-                <Route exact path='/' component= {Body}/>
-                <Route path='newbody' component = {NewBody}/>
+                <Route path="/" component={Home}/>
+                <Route path="/about" component={About}/>
+                <Route path="/contact" component={Contact}/>
+                <Route path="/services" component={Services}/>
             </Switch>
             <Footer />
         </div>

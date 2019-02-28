@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import Badge from './Badge.js'
 import './styles.css';
 
+// Form component 
+  // 7 inputs, form, button
+  //handleSubmit, handleChange
+  // constructor and state
+//Name Badge List
+//Name Badge
+
 
 class App extends Component {
   constructor(){
@@ -19,9 +26,7 @@ class App extends Component {
   }
 
   handleChange = event => {
-    const value = event.target.type === "checkbox"
-                        ? event.target.checked
-                        : event.target.value
+    
     this.setState({
       [event.target.name]: value
     })
@@ -64,6 +69,7 @@ class App extends Component {
 
         <form className="badge-form" onSubmit={this.handleSubmit}>
         <input className="inputs"
+        // pattern=""
         type="text"
         name="firstName"
         value={this.state.firstName}
@@ -116,14 +122,13 @@ class App extends Component {
         placeholder="Favorite Food"
         />
 
-        <input
-        className="inputs" 
-        type="text"
-        name="description"
-        value={this.state.description}
-        onChange={this.handleChange}
-        placeholder="Tell me about yourself"
-        />
+        <textarea 
+        onChange = {this.handleChange} 
+        name="description" 
+        value={this.state.description} 
+        placeholder="Tell me about yourself">
+        </textarea>
+
         <button>Submit</button>
         
         </form>
