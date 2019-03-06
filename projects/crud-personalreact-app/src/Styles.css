@@ -1,3 +1,33 @@
 *{
   margin: 0;
 }
+
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 100pt;
+    background-color: rgba(23, 34, 345, .8)
+}
+
+.home,
+.about,
+.contact{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home {
+  background-color: cornflowerblue;
+}
+
+.about {
+  background-color: firebrick;
+}
+
+.contact {
+  background-color: darkorchid;
+}

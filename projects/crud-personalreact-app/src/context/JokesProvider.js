@@ -13,7 +13,15 @@ class JokesProvider extends Component {
         this.url = "https://icanhazdadjoke.com/"
     }
 
-    getJokes =
+    getJokes = () => {
+        axios.get(this.url).then(response => {
+            this.setState({
+                savedJokes: response.data
+            })
+        }).catch(error => console.log(error))
+    }
+
+    //save current joke and previous jokes
 
     render(){
         return(
@@ -27,6 +35,8 @@ class JokesProvider extends Component {
         )
     }
 }
+
+//Lets other components use context
 
 export const withJokes = C => props => (
     <JokesContext.Consumer>
