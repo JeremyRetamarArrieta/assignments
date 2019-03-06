@@ -1,12 +1,15 @@
 import React from 'react'
+import {withJokes} from '../context/JokesProvider.js'
 
-const JokesPage = () => {
+const JokesPage = (props) => {
+    // console.log(props)
     return(
         <div>
-            <h1> Your made it this far...</h1>
+            <h1> You've made it this far...</h1>
             <p> You must really like dad jokes.</p>
+            <h1>{props.savedJoke}</h1>
         </div>
     )
 }
 
-export default JokesPage
+export default withJokes(JokesPage)

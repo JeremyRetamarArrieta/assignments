@@ -7,28 +7,34 @@ class JokesProvider extends Component {
     constructor (){
         super()
         this.state = {
-            savedJokes: [],
+            id: {},
+            savedJoke: {},
             currentJoke: ""
         }
         this.url = "https://icanhazdadjoke.com/"
     }
 
     getJokes = () => {
-        axios.get(this.url).then(response => {
+        axios.get(this.url, {headers: {Accept: 'application/json'}}).then(response => {
+            // console.log(response.data)
             this.setState({
-                savedJokes: response.data
+                savedJoke: response.data
             })
+            // console.log(this.state)
         }).catch(error => console.log(error))
     }
 
     //save current joke and previous jokes
 
     render(){
+        console.log(this.state)
         return(
             <JokesContext.Provider
                 value={{
-                    savedJokes: this.state.jokes,
-                    currentJoke: this.state.currentJoke
+                    id: this.state.id,
+                    savedJoke: this.state.savedJoke.joke,
+                    currentJoke: this.state.currentJoke,
+                    getJokes: this.getJokes
                 }}>
                 { this.props.children }
             </JokesContext.Provider>
