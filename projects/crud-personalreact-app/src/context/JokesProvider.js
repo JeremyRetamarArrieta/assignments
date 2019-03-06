@@ -8,17 +8,24 @@ class JokesProvider extends Component {
         super()
         this.state = {
             id: {},
-            savedJoke: {},
-            currentJoke: ""
+            savedJokes: [],
+            currentJoke: {}
         }
         this.url = "https://icanhazdadjoke.com/"
     }
 
+    saveJoke = () => {
+        this.setState(prevState => ({
+            savedJokes: [...prevState.savedJokes, this.state.currentJoke.joke]
+
+        }))
+    }
+    
     getJokes = () => {
         axios.get(this.url, {headers: {Accept: 'application/json'}}).then(response => {
             // console.log(response.data)
             this.setState({
-                savedJoke: response.data
+                currentJoke: response.data
             })
             // console.log(this.state)
         }).catch(error => console.log(error))
@@ -32,9 +39,10 @@ class JokesProvider extends Component {
             <JokesContext.Provider
                 value={{
                     id: this.state.id,
-                    savedJoke: this.state.savedJoke.joke,
-                    currentJoke: this.state.currentJoke,
-                    getJokes: this.getJokes
+                    savedJokes: this.state.savedJokes,
+                    currentJoke: this.state.currentJoke.joke,
+                    getJokes: this.getJokes,
+                    saveJoke: this.saveJoke
                 }}>
                 { this.props.children }
             </JokesContext.Provider>

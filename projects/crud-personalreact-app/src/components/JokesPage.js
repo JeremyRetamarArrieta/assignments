@@ -1,13 +1,14 @@
 import React from 'react'
 import {withJokes} from '../context/JokesProvider.js'
+import Jokes from './Jokes.js'
 
-const JokesPage = (props) => {
-    // console.log(props)
+const JokesPage = () => {
     return(
-        <div>
+        <div className="jokespage">
             <h1> You've made it this far...</h1>
             <p> You must really like dad jokes.</p>
-            <h1>{props.savedJoke}</h1>
+            <Jokes />
+            
         </div>
     )
 }

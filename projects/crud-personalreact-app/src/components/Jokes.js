@@ -6,12 +6,10 @@ const Jokes = props => {
     console.log(props)
     return(
         <div>
-            <h1>{getJoke()}</h1>
+            <h3>{props.currentJoke}</h3>
+            <button onClick={props.saveJoke}>Save</button>
         </div>
     )
 }
 
 export default withJokes(Jokes)
-//ask about setting 
-//up something that takes the info 
-//from api and sends it to a jokes generator function if needed...

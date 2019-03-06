@@ -10,12 +10,14 @@
 
 html {
   background-color: #1119;
+  align-items: center;
 }
 
 .nav{
     display: flex;
     flex-direction: column;
     width: 100pt;
+    height: 100%;
     background-color: rgba(7, 200, 191, 0.911);
     align-items: center;
     position: absolute;
@@ -52,7 +54,8 @@ html {
 
 .home,
 .about,
-.contact{
+.contact,
+.jokespage{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -73,10 +76,19 @@ html {
   background-color: darkorchid;
 }
 
+.jokespage{
+  background-color: blanchedalmond;
+  align-content: center;
+  align-items: center;
+  display: grid;
+  /* grid-template-rows: 2fr 2fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 6fr; */
+}
+
 .overlay {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.74);
   position: absolute;
   transition: left 300ms linear;
   z-index: 2; /* Overlay is the layer directly behind nav */
