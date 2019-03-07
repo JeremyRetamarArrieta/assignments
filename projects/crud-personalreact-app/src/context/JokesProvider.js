@@ -14,27 +14,30 @@ class JokesProvider extends Component {
         this.url = "https://icanhazdadjoke.com/"
     }
 
+    //save current/previous jokes
+
     saveJoke = () => {
         this.setState(prevState => ({
             savedJokes: [...prevState.savedJokes, this.state.currentJoke.joke]
 
         }))
     }
+
+
     
     getJokes = () => {
         axios.get(this.url, {headers: {Accept: 'application/json'}}).then(response => {
-            // console.log(response.data)
+            
             this.setState({
                 currentJoke: response.data
             })
-            // console.log(this.state)
         }).catch(error => console.log(error))
     }
 
-    //save current joke and previous jokes
+    
+    
 
     render(){
-        console.log(this.state)
         return(
             <JokesContext.Provider
                 value={{
@@ -50,7 +53,6 @@ class JokesProvider extends Component {
     }
 }
 
-//Lets other components use context
 
 export const withJokes = C => props => (
     <JokesContext.Consumer>
