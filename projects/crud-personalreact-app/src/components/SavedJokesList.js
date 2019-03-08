@@ -1,10 +1,12 @@
-// import React from 'react'
-// import {withJokes , savedJokes} from '../context/JokesProvider'
+import React from 'react'
+import {withJokes } from '../context/JokesProvider'
 
-// const SavedJokesList = props => {
-//     <div>
-//         <h4>{props.savedJokes}</h4>
-//     </div>
-// }
+const SavedJokesList = props => {
+    return (
+    <div>
+        <h4>{props.savedJokes}</h4>
+    </div>
+    )
+}
 
-// export default withJokes(SavedJokesList)
+export default withJokes(SavedJokesList)
