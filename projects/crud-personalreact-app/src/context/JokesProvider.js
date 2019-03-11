@@ -9,7 +9,8 @@ class JokesProvider extends Component {
         this.state = {
             id: {},
             savedJokes: [],
-            currentJoke: {}
+            currentJoke: {},
+            imagesArry: [],
         }
         this.url = "https://icanhazdadjoke.com/"
     }
@@ -17,6 +18,10 @@ class JokesProvider extends Component {
     //save current/previous jokes
 
     saveJoke = () => {
+        // let jokeobject = {
+        //     joke: this.state.currentJoke.joke
+        //     img:
+        // }
         this.setState(prevState => ({
             savedJokes: [...prevState.savedJokes, this.state.currentJoke.joke]
 

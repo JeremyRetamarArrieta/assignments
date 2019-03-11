@@ -2,9 +2,18 @@ import React from 'react'
 import {withJokes } from '../context/JokesProvider'
 
 const SavedJokesList = props => {
+    console.log(props.savedJokes)
+    let mappedsavedJokes= props.savedJokes.map((joke, i) => 
+            <div>
+                <ul>{joke}</ul> 
+                // img
+                //div bkgrnd
+            </div>
+    )
+    
     return (
     <div>
-        <h4>{props.savedJokes}</h4>
+        {mappedsavedJokes}
     </div>
     )
 }

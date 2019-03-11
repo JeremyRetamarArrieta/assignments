@@ -4,10 +4,14 @@ const Home = () => {
     return (
         <div className="home">
             <h1> Welcome to Big J's Joke imporium.</h1>
+
+            <div className="doggo"></div>
             
             <h3> We are currently under renovations any feed back is apprieciated.</h3>
-            
+             <div className="smile"></div>
             <p> We love smiling and hope to spead more smiles around the world. </p>
+
+           
         </div>
     )
 }
