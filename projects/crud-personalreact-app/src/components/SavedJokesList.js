@@ -6,8 +6,6 @@ const SavedJokesList = props => {
     let mappedsavedJokes= props.savedJokes.map((joke, i) => 
             <div>
                 <ul>{joke}</ul> 
-                // img
-                //div bkgrnd
             </div>
     )
     
