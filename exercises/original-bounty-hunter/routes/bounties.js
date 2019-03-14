@@ -89,6 +89,7 @@ bountiesRouter.route("/:_id")
     })
 
     .put((req, res) => {
+        console.log(req.params)
         const foundBounty =characters.find(item => item._id === req.params._id)
         Object.assign(foundBounty, req.body)
         res.send(foundBounty)

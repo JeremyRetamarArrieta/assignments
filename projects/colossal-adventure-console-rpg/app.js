@@ -77,7 +77,7 @@ if (player.name) {
     walkSequence()
 }
 
-//     this.userChoice = function () {
+
 
 function walkSequence() {
     var action = ask.question(' What do you wanna do? Press W to go for a walk, press S to sleep in, press P for inventory or D for dance: ')
@@ -108,7 +108,7 @@ function walkSequence() {
 
 function attack() {
     var chance = Math.floor(Math.random() * 3)
-    // if number is 1 === attack
+    
     if (chance === 1) {
         console.log(" Something decked you in the face !")
         playerChoice();
@@ -151,9 +151,9 @@ function fight() {
 
 function getRandomItem() {
     var randomItem = Math.floor(Math.random() * items.length)
-    var pushItem = items[randomItem]
-    player.score += pushItem.value
-    return player.inventory.push(pushItem) 
+    var dropItem = items[randomItem]
+    player.score += dropItem.value
+    return player.inventory.push(dropItem) 
 
 }
 
