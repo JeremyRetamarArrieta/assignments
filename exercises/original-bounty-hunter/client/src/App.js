@@ -4,11 +4,14 @@ import {Router, Route, Switch} from 'react-router'
 import Axios from 'axios';
 
 class App extends Component {
-  
-  constructor{
+
+  constructor() {
     super()
     this.state = {
-        bounites:[]
+        firstName: "",
+        lastName: "",
+        living: false,
+
     }
   }
 
@@ -24,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {this.state.bounties.map(bounites => <h1>{bounites.firstName} {bounties.lastName}</h1>)}
+
       </div>
     )
   }
