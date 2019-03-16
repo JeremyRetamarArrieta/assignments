@@ -9,8 +9,17 @@ const bountySchema = new Schema({
     },
     lastName: {
         type: String,
-        required
-    }
+        required: true
+    },
+    living: {
+        type: Boolean,
+        required: true
+    },
+    bountyAmount: {
+        type: Number,
+        required: true
+    },
+    // Type: ("Sith" || "Jedi")
 })
 
 

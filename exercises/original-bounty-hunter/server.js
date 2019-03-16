@@ -10,9 +10,9 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 //conntect to db
-mongoose.connect("mongodb://localhost:27107/bountydb-1", {useNewUrlParser: true}), () => {
+mongoose.connect("mongodb://localhost:27107/bountydb-1", {useNewUrlParser: true}, () => {
     console.log(`[o] Connected to the DB`)
-}
+})
 // routes
 app.use("/bounties", require('./routes/bountiesRoutes.js/index.js'))
 
